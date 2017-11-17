@@ -115,8 +115,6 @@ class ClusterAvailabilityCheck(threading.Thread):
                         None
                     self.statusserver[status_state['ordinal']] = status_state['timestamp_epoch']
                     logging.info("Server items = %s", self.servers.viewitems())
-                    #print(str(self.statusserver))
-                    #logging.info(status['id'], status['ordinal'])
                     self.servers[status_state['ordinal']] = status_state
                     #while status server and timestamp items
                     for ordinal, timestamp in self.statusserver.items():
